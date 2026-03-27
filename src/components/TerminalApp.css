@@ -1,0 +1,123 @@
+.terminal-wrapper {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  cursor: text;
+  font-family: 'Courier New', 'Menlo', monospace;
+}
+
+.terminal-titlebar {
+  background: #1e1e1e;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #ff5f57; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #28c940; }
+
+.terminal-title {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  flex: 1;
+  text-align: center;
+}
+
+.terminal-body {
+  background: var(--term-bg);
+  padding: 1.25rem 1.5rem;
+  min-height: 400px;
+  max-height: 550px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #374151 var(--term-bg);
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: var(--term-bg);
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: var(--term-text);
+}
+
+.terminal-link {
+  color: var(--term-prompt);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.terminal-link:hover {
+  color: #fff;
+  background: rgba(234, 179, 8, 0.3);
+}
+
+.terminal-line.input-line {
+  color: var(--term-prompt);
+}
+
+.terminal-line.error {
+  color: #f87171;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.terminal-prompt {
+  color: var(--term-prompt);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  font-family: 'Courier New', 'Menlo', monospace;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--term-text);
+  font-family: 'Courier New', 'Menlo', monospace;
+  font-size: 0.875rem;
+  flex: 1;
+  caret-color: var(--term-green);
+}
+
+.terminal-input::selection {
+  background: rgba(34, 197, 94, 0.3);
+}

@@ -1,0 +1,108 @@
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.edu-card {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--border-light);
+  transition: background 0.4s ease;
+}
+
+.edu-card.current::before {
+  background: var(--gradient-primary);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.edu-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.edu-card:hover .edu-icon {
+  background: var(--gradient-primary);
+  color: #020617;
+  transform: rotate(-8deg) scale(1.1);
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.4);
+}
+
+.edu-body { flex: 1; }
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.edu-degree {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.edu-badge {
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+}
+
+.edu-institution {
+  font-size: 1rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.edu-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.edu-period {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.edu-score {
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+}

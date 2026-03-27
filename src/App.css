@@ -1,0 +1,14 @@
+/* @import './index.css'; removed for stability */
+
+/* Minimal App CSS as most styles are modular or in index.css */
+.portfolio-app {
+  position: relative;
+}
+
+.terminal-section {
+  padding: 4rem 2rem;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
